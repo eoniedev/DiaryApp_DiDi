@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Choose_module">
+    <include
+        android:id="@+id/icHeader"
+        layout="@layout/headermain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"/>
+
+    <Button
+        android:id="@+id/btdiary"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="22dp"
+        android:drawableLeft="@drawable/button_diary"
+        android:paddingLeft="10dp"
+        android:text="Diary"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:textColor="#A6D4F8"
+        android:background="@drawable/button"/>
+
+    <Button
+        android:id="@+id/btlist"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="22dp"
+        android:drawableLeft="@drawable/button_list"
+        android:paddingLeft="10dp"
+        android:text="todolist"
+        android:textColor="#A6D4F8"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:background="@drawable/button" />
+
+    <Button
+        android:id="@+id/btfood"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="22dp"
+        android:drawableLeft="@drawable/button_food"
+        android:paddingLeft="10dp"
+        android:text="Food"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:textColor="#A6D4F8"
+        android:background="@drawable/button" />
+
+    <Button
+        android:id="@+id/bthealth"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="22dp"
+        android:drawableLeft="@drawable/button_exercise"
+        android:paddingLeft="10dp"
+        android:text="Exercise"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:textColor="#A6D4F8"
+        android:background="@drawable/button" />
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <include
+        android:id="@+id/Header"
+        layout="@layout/headermain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <EditText
+            android:id="@+id/ettodo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:layout_weight="6"
+            android:hint="내용을 입력하세요."
+            android:inputType="textPersonName"/>
+        <Button
+            android:id="@+id/btnsave"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="저장"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/button"
+            android:textColor="#A6D4F8"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/todoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+    <!--<LinearLayout
+        android:id="@+id/layoutTodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="7"
+            android:text="X"
+            android:textSize="20dp"
+            android:textColor="#A6D4F8"
+            android:textStyle="bold"
+            android:background="@drawable/button" />
+    </LinearLayout> -->
+</LinearLayout>

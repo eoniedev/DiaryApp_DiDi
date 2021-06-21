@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insert_food_2"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/Header"
+        layout="@layout/headermain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center">
+            <TextView
+                android:text="음식"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/foodName"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center">
+            <TextView
+                android:text="칼로리"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/calorie"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+        <android.widget.Button
+            android:id="@+id/saveButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="SAVE"
+            android:textColor="#a6d4f8"
+            android:textSize="40px"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:textStyle="bold" />
+        <android.widget.Button
+            android:id="@+id/searchButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="SEARCH"
+            android:textColor="#a6d4f8"
+            android:textSize="40px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="#FFFFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp" >
+        <ListView
+            android:id="@+id/foodList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
