@@ -108,7 +108,7 @@ public class Todolist extends AppCompatActivity {
         if(cursor != null) {
             while(cursor.moveToNext()) {
                 int getcheck = cursor.getInt(2);
-                Toast.makeText(getApplicationContext(), Integer.toString(count)+ " : "+Integer.toString(getcheck), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), Integer.toString(count)+ " : "+Integer.toString(getcheck), Toast.LENGTH_SHORT).show();
                 String gettodo = cursor.getString(1);
                 adapter.addItem(gettodo, getcheck);
                 settodo.add(gettodo);
@@ -119,7 +119,7 @@ public class Todolist extends AppCompatActivity {
     private void checkupdate(Todolistadapter adapter) {
         int count = adapter.getCount();
         int tmpcheck = 0;
-        Toast.makeText(getApplicationContext(),Integer.toString(count),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),Integer.toString(count),Toast.LENGTH_SHORT).show();
         for(int i = 0; i < count; i++) {
             tmpcheck = adapter.getcheck(i);
             /*

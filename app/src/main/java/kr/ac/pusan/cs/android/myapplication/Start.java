@@ -104,6 +104,7 @@ public class Start extends TabActivity implements View.OnClickListener, OnDateSe
                 .commit();
         material.addDecorators(oneDayDecorator);
         material.setOnDateChangedListener(this);
+
         int permissionCheck = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.CAMERA);
         if(permissionCheck != PackageManager.PERMISSION_GRANTED) {
@@ -125,6 +126,14 @@ public class Start extends TabActivity implements View.OnClickListener, OnDateSe
                 setLineChart();
             }
         });
+        //permissionCount();
+
+        //chart
+        setLineChart();
+
+    }
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void permissionCount(){
         if(ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){
             //ask for permission
@@ -133,12 +142,7 @@ public class Start extends TabActivity implements View.OnClickListener, OnDateSe
 
         Intent intent = new Intent(Start.this, MyService.class);
         startService(intent);
-
-        //chart
-        setLineChart();
-
     }
-
     @Override
     public void onDateSelected(MaterialCalendarView widget, CalendarDay date, boolean selected) {
         try {

@@ -1,6 +1,8 @@
 package kr.ac.pusan.cs.android.myapplication;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,11 +15,14 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class EnterUserInfo extends AppCompatActivity {
+    private int MY_PERMISSIONS_REQUEST_CAMERA  ;
     MyDBHelper myDBHelper;
     SQLiteDatabase sqlDB;
 
@@ -60,6 +65,7 @@ public class EnterUserInfo extends AppCompatActivity {
 
             }
         });
+
     }
 
     //옵션 메뉴를 생성
